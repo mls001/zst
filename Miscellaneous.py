@@ -6,7 +6,7 @@ def double_your_money(r):
     year = 0
     money = 1
     if money < 2:
-        money *= 1.0 + r
+        money *= 1.0 + r  # 等价于money = money * (1.0 + r)
         year += 1
     return year
 
@@ -19,7 +19,7 @@ def difference_methods(n, X, Y):
     """
     Y1 = []
     for i in range(len(Y) - 1):
-        Y1.append(Y[i + 1] - Y[i])
+        Y1.append(Y[i + 1] - Y[i])  # 使用xxx.append()来追加列表内容
     Y2 = []
     for i in range(len(Y1) - 1):
         Y2.append(Y1[i + 1] - Y1[i])

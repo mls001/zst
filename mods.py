@@ -1,4 +1,4 @@
-from math import fabs
+from math import fabs  # 调用 math 中的 fabs 函数
 
 
 def lagrange(x0, y0, F, x, y):
@@ -40,7 +40,7 @@ def Gauss_Seidel(n, A, B):
     :param B: 常数向量
     """
     x0 = [0.0, 0.0, 0.0]
-    x1 = [0.0, 0.0, 0.0]
+    x1 = [0.0, 0.0, 0.0]  # tip:千万不要 x0 = x1 = [0.0, 0.0, 0.0], 否则会有神奇事情发生, 至于如果很好奇发生了什么神秘事件可以咨询一下老师(确信)
     e = 0.0001
     m = 0
     while 1:
@@ -50,7 +50,7 @@ def Gauss_Seidel(n, A, B):
         for i in range(n):
             s = 0
             for j in range(n):
-                if i != j:
+                if i != j:  # 其实为了更好的阅读性, 通常建议全部写成判定为 true, 例如: if i == j: pass
                     s += A[i][j] * x1[j]
             x1[i] = (B[i] - s) / A[i][i]
             m += 1

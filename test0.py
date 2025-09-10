@@ -1,4 +1,4 @@
-from mods import lagrange, Gauss_Seidel
+from mods import lagrange, Gauss_Seidel  # 很好理解, 从 xxx 中导入 xxx 函数
 
 x0 = 50000
 y0 = 0.02
@@ -15,5 +15,5 @@ A = [[30, 1, -1],
      [1, 20, -1],
      [1, 1, 10]]
 B = [29, 38, 33]
-# Ax = B
-result_Gauss_Seidel = Gauss_Seidel(3, A, B)
+# Ax = B 的求解
+result_Gauss_Seidel = Gauss_Seidel(3, A, B)  # 期待有人提交实现任意n阶的代码哦
